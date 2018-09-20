@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/inputET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter Binary Number"
+            android:inputType="numberDecimal" />
+
+        <Switch
+            android:id="@+id/negativeSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="store as Negative?" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onConvertButtonPressed"
+            android:text="Convert to 2s Complement" />
+
+        <TextView
+            android:id="@+id/answerTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The Answer in 2s Complement" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
