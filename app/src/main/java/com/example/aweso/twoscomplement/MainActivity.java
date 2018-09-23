@@ -35,10 +35,19 @@ public class MainActivity extends AppCompatActivity
         return answer;
     }
 
-    private String addOne(String bin)
-    {
-        //will return a new String that is the given String with 1 added to it
-        return bin;
+    private String addOne(String bin) {
+        StringBuilder answer = new StringBuilder(bin);
+        for (int i = answer.length()-1; i > 0; i--) {
+            if (answer.charAt(i) == '0') {
+                answer.setCharAt(i, '1');
+                break; //Once we've added the one we want to quit looping
+            } else {
+                // add one results in it being equal to 2 in base 10 or 10 in base 2, so we put a zero
+                // and carry the one.
+                answer.setCharAt(i, '0');
+            }
+        }
+        return answer.toString();
     }
 
     private String encodeAsTwosComplement(String bin)
