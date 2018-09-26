@@ -16,14 +16,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Enter Binary Number"
-            android:inputType="numberDecimal" />
-
-        <Switch
-            android:id="@+id/negativeSwitch"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="store as Negative?" />
+            android:hint="Enter Decimal Number"
+            android:inputType="numberSigned" />
 
         <Button
             android:id="@+id/button"
@@ -37,5 +31,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="The Answer in 2s Complement" />
+
+        <Button
+            android:id="@+id/onDecodeBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:editable="false"
+            android:enabled="false"
+            android:onClick="onDecodeButtonPressed"
+            android:text="Decode 2s Complement" />
+
+        <TextView
+            android:id="@+id/decodeTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The decoded value" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
